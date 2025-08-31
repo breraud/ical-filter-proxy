@@ -1,0 +1,13 @@
+rota:
+  ical_url: https://cocktail.insa-rouen.fr/ics/edt-ade/2025-ITI3
+  api_key: abc12
+  rules:
+  - name: emploi-filtré
+    source: "https://edt.univ-exemple.fr/etudiant/emploi.ics"
+    filter: "(ITI31-TP-GR-3-1|ITI31-TD-GR-03)"
+    fields: ["description"]
+  alarms:
+    clear_existing: true
+    triggers:
+      - '-P1DT0H0M0S'
+      - '-P1DT1H1M2S'
